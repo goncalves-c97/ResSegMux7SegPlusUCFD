@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX_isim_beh.exe" -prj "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX_beh.prj" "work.tb_SD_MUX" 

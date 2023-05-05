@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.syr" 
+vhdtdtfi -prj ResSegMux7SegPlusUCFDProj -o C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhi -module regmux7seg -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work reg4bits.vhd -lib work mux2x4.vhd -lib work decoder7seg.vhd -lib work regmux7seg.vhd 

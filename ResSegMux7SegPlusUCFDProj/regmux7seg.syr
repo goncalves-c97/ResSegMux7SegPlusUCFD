@@ -1,0 +1,415 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: regmux7seg.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "regmux7seg.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "regmux7seg"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-cp132
+
+---- Source Options
+Top Module Name                    : regmux7seg
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/reg4bits.vhd" in Library work.
+Entity <reg4bits> compiled.
+Entity <reg4bits> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/mux2x4.vhd" in Library work.
+Entity <mux2x4> compiled.
+Entity <mux2x4> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/decoder7seg.vhd" in Library work.
+Entity <decoder7seg> compiled.
+Entity <decoder7seg> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd" in Library work.
+Entity <regmux7seg> compiled.
+Entity <regmux7seg> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <regmux7seg> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <reg4bits> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <mux2x4> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <decoder7seg> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <regmux7seg> in library <work> (Architecture <Behavioral>).
+Entity <regmux7seg> analyzed. Unit <regmux7seg> generated.
+
+Analyzing Entity <reg4bits> in library <work> (Architecture <Behavioral>).
+Entity <reg4bits> analyzed. Unit <reg4bits> generated.
+
+Analyzing Entity <mux2x4> in library <work> (Architecture <Behavioral>).
+Entity <mux2x4> analyzed. Unit <mux2x4> generated.
+
+Analyzing Entity <decoder7seg> in library <work> (Architecture <Behavioral>).
+Entity <decoder7seg> analyzed. Unit <decoder7seg> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <reg4bits>.
+    Related source file is "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/reg4bits.vhd".
+    Found 4-bit register for signal <OUTPUT>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <reg4bits> synthesized.
+
+
+Synthesizing Unit <mux2x4>.
+    Related source file is "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/mux2x4.vhd".
+Unit <mux2x4> synthesized.
+
+
+Synthesizing Unit <decoder7seg>.
+    Related source file is "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/decoder7seg.vhd".
+    Found 16x4-bit ROM for signal <DISP>.
+    Found 16x7-bit ROM for signal <OUTPUT>.
+    Summary:
+	inferred   2 ROM(s).
+Unit <decoder7seg> synthesized.
+
+
+Synthesizing Unit <regmux7seg>.
+    Related source file is "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd".
+Unit <regmux7seg> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x4-bit ROM                                          : 1
+ 16x7-bit ROM                                          : 1
+# Registers                                            : 3
+ 4-bit register                                        : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x4-bit ROM                                          : 1
+ 16x7-bit ROM                                          : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <regmux7seg> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block regmux7seg, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : regmux7seg.ngr
+Top Level Output File Name         : regmux7seg
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 15
+#      INV                         : 4
+#      LUT3                        : 4
+#      LUT4                        : 7
+# FlipFlops/Latches                : 12
+#      FDRE                        : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 13
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-4 
+
+ Number of Slices:                        8  out of    960     0%  
+ Number of Slice Flip Flops:             12  out of   1920     0%  
+ Number of 4 input LUTs:                 15  out of   1920     0%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of     83    30%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 12    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.102ns (Maximum Frequency: 475.737MHz)
+   Minimum input arrival time before clock: 3.090ns
+   Maximum output required time after clock: 5.870ns
+   Maximum combinational path delay: 6.034ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.102ns (frequency: 475.737MHz)
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Delay:               2.102ns (Levels of Logic = 1)
+  Source:            reg2/OUTPUT_3 (FF)
+  Destination:       reg3/OUTPUT_3 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: reg2/OUTPUT_3 to reg3/OUTPUT_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.591   0.499  reg2/OUTPUT_3 (reg2/OUTPUT_3)
+     LUT3:I1->O            1   0.704   0.000  mux1/S<3>1 (mux_reg3<3>)
+     FDRE:D                    0.308          reg3/OUTPUT_3
+    ----------------------------------------
+    Total                      2.102ns (1.603ns logic, 0.499ns route)
+                                       (76.3% logic, 23.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              3.090ns (Levels of Logic = 1)
+  Source:            CLR (PAD)
+  Destination:       reg3/OUTPUT_3 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: CLR to reg3/OUTPUT_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.218   0.961  CLR_IBUF (CLR_IBUF)
+     FDRE:R                    0.911          reg3/OUTPUT_0
+    ----------------------------------------
+    Total                      3.090ns (2.129ns logic, 0.961ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 28 / 7
+-------------------------------------------------------------------------
+Offset:              5.870ns (Levels of Logic = 2)
+  Source:            reg3/OUTPUT_0 (FF)
+  Destination:       OUTPUT<6> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: reg3/OUTPUT_0 to OUTPUT<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             7   0.591   0.883  reg3/OUTPUT_0 (reg3/OUTPUT_0)
+     LUT4:I0->O            1   0.704   0.420  decoder1/Mrom_OUTPUT31 (OUTPUT_3_OBUF)
+     OBUF:I->O                 3.272          OUTPUT_3_OBUF (OUTPUT<3>)
+    ----------------------------------------
+    Total                      5.870ns (4.567ns logic, 1.303ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               6.034ns (Levels of Logic = 3)
+  Source:            DISP_CTRL<3> (PAD)
+  Destination:       DISP_SUPPLY<3> (PAD)
+
+  Data Path: DISP_CTRL<3> to DISP_SUPPLY<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  DISP_CTRL_3_IBUF (DISP_CTRL_3_IBUF)
+     INV:I->O              1   0.704   0.420  decoder1/Mrom_DISP31_INV_0 (DISP_SUPPLY_3_OBUF)
+     OBUF:I->O                 3.272          DISP_SUPPLY_3_OBUF (DISP_SUPPLY<3>)
+    ----------------------------------------
+    Total                      6.034ns (5.194ns logic, 0.840ns route)
+                                       (86.1% logic, 13.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.86 secs
+ 
+--> 
+
+Total memory usage is 230896 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

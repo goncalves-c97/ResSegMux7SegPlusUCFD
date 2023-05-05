@@ -1,0 +1,6 @@
+work	"SD_MUX.vhd"
+work	"UC_MUX.vhd"
+work	"decoder7seg.vhd"
+work	"mux2x4.vhd"
+work	"reg4bits.vhd"
+work	"regmux7seg.vhd"

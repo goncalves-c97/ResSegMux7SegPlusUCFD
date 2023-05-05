@@ -1,0 +1,6 @@
+vhdl work "reg4bits.vhd"
+vhdl work "mux2x4.vhd"
+vhdl work "decoder7seg.vhd"
+vhdl work "UC_MUX.vhd"
+vhdl work "regmux7seg.vhd"
+vhdl work "SD_MUX.vhd"

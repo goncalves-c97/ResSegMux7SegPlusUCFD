@@ -1,0 +1,1 @@
+vhdtdtfi -prj ResSegMux7SegPlusUCFDProj -o C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhi -module UC_MUX -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work UC_MUX.vhd 

@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX_isim_beh.exe -prj C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX_beh.prj work.tb_SD_MUX 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/reg4bits.vhd" into library work
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/mux2x4.vhd" into library work
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/decoder7seg.vhd" into library work
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhd" into library work
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd" into library work
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.vhd" into library work
+Parsing VHDL file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity reg4bits [reg4bits_default]
+Compiling architecture behavioral of entity mux2x4 [mux2x4_default]
+Compiling architecture behavioral of entity decoder7seg [decoder7seg_default]
+Compiling architecture behavioral of entity regmux7seg [regmux7seg_default]
+Compiling architecture behavioral of entity UC_MUX [uc_mux_default]
+Compiling architecture behavioral of entity SD_MUX [sd_mux_default]
+Compiling architecture behavior of entity tb_sd_mux
+Time Resolution for simulation is 1ps.
+Compiled 15 VHDL Units
+Built simulation executable C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX_isim_beh.exe
+Fuse Memory Usage: 30796 KB
+Fuse CPU Usage: 296 ms
