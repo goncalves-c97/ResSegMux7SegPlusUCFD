@@ -24,5 +24,5 @@ Compiling architecture behavior of entity tb_sd_mux
 Time Resolution for simulation is 1ps.
 Compiled 15 VHDL Units
 Built simulation executable C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/tb_SD_MUX_isim_beh.exe
-Fuse Memory Usage: 30796 KB
-Fuse CPU Usage: 296 ms
+Fuse Memory Usage: 31424 KB
+Fuse CPU Usage: 327 ms

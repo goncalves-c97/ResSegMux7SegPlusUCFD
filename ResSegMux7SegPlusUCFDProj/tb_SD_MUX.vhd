@@ -68,7 +68,7 @@ ARCHITECTURE behavior OF tb_SD_MUX IS
    signal DISP_SUPPLY : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant CLK_period : time := 10 ns;
+   constant CLK_period : time := 50 ns;
  
 BEGIN
  
@@ -100,38 +100,41 @@ BEGIN
    begin		
 	
 		RST <= '1';
-      wait for 100 ns;	
+      wait for CLK_period;	
 		RST <= '0';
-      wait for 100 ns;	
+      wait for CLK_period;	
 		
 		ENT <= "1010";
-      wait for 100 ns;
+      wait for CLK_period;
 		GV1 <= '1';
 		GV2 <= '0';
-		wait for 100 ns;
+		wait for 300 ns;
 		GV1 <= '0';
 		GV2 <= '0';
-		wait for 100 ns;
+		wait for CLK_period;
 		
 		
 		ENT <= "0101";
-		wait for 100 ns;
+		wait for CLK_period;
 		GV1 <= '0';
 		GV2 <= '1';
-		wait for 100 ns;
+		wait for CLK_period;
 		GV1 <= '0';
 		GV2 <= '0';
-		wait for 100 ns;
+		wait for CLK_period;
 		
 		MST1 <= '1';
 		MST2 <= '0';
-		wait for 100 ns;
+		wait for CLK_period;
 		MST1 <= '0';
 		MST2 <= '0';
-		wait for 100 ns;
+		wait for CLK_period;
 		MST1 <= '0';
 		MST2 <= '1';
-		wait for 100 ns;
+		wait for CLK_period;
+		MST1 <= '0';
+		MST2 <= '0';
+		wait for CLK_period;
 
    end process;
 

@@ -4,3 +4,10 @@ xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCF
 xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.syr" 
 xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.syr" 
 xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.syr" 
+xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.syr" 
+xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.syr" 
+xst -intstyle ise -ifn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.xst" -ofn "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 SD_MUX.ngc SD_MUX.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o SD_MUX_map.ncd SD_MUX.ngd SD_MUX.pcf 
+par -w -intstyle ise -ol high -t 1 SD_MUX_map.ncd SD_MUX.ncd SD_MUX.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml SD_MUX.twx SD_MUX.ncd -o SD_MUX.twr SD_MUX.pcf 

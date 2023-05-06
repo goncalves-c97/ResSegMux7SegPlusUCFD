@@ -1,43 +1,43 @@
 V3 23
 FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/decoder7seg.vhd 2023/05/05.19:56:11 P.20131013
-EN work/decoder7seg 1683330022 \
+EN work/decoder7seg 1683334704 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/decoder7seg.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/decoder7seg/Behavioral 1683330023 \
+AR work/decoder7seg/Behavioral 1683334705 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/decoder7seg.vhd \
-      EN work/decoder7seg 1683330022
+      EN work/decoder7seg 1683334704
 FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/mux2x4.vhd 2023/05/05.19:56:11 P.20131013
-EN work/mux2x4 1683330020 \
+EN work/mux2x4 1683334702 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/mux2x4.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/mux2x4/Behavioral 1683330021 \
+AR work/mux2x4/Behavioral 1683334703 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/mux2x4.vhd \
-      EN work/mux2x4 1683330020
+      EN work/mux2x4 1683334702
 FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/reg4bits.vhd 2023/05/05.19:56:11 P.20131013
-EN work/reg4bits 1683330018 \
+EN work/reg4bits 1683334700 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/reg4bits.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/reg4bits/Behavioral 1683330019 \
+AR work/reg4bits/Behavioral 1683334701 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/reg4bits.vhd \
-      EN work/reg4bits 1683330018
+      EN work/reg4bits 1683334700
 FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd 2023/05/05.20:30:54 P.20131013
-EN work/regmux7seg 1683330024 \
+EN work/regmux7seg 1683334706 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/regmux7seg/Behavioral 1683330025 \
+AR work/regmux7seg/Behavioral 1683334707 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd \
-      EN work/regmux7seg 1683330024 CP reg4bits CP mux2x4 CP decoder7seg
-FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.vhd 2023/05/05.20:40:13 P.20131013
-EN work/SD_MUX 1683330028 \
+      EN work/regmux7seg 1683334706 CP reg4bits CP mux2x4 CP decoder7seg
+FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.vhd 2023/05/05.21:33:10 P.20131013
+EN work/SD_MUX 1683334710 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/SD_MUX/Behavioral 1683330029 \
+AR work/SD_MUX/Behavioral 1683334711 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.vhd \
-      EN work/SD_MUX 1683330028 CP regmux7seg CP UC_MUX
-FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhd 2023/05/05.20:30:54 P.20131013
-EN work/UC_MUX 1683330026 \
+      EN work/SD_MUX 1683334710 CP regmux7seg CP UC_MUX
+FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhd 2023/05/05.21:58:01 P.20131013
+EN work/UC_MUX 1683334708 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/UC_MUX/Behavioral 1683330027 \
+AR work/UC_MUX/Behavioral 1683334709 \
       FL C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhd \
-      EN work/UC_MUX 1683330026
+      EN work/UC_MUX 1683334708

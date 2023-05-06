@@ -1,4 +1,4 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
@@ -113,15 +113,15 @@ Architecture behavioral of Entity decoder7seg is up to date.
 Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/regmux7seg.vhd" in Library work.
 Architecture behavioral of Entity regmux7seg is up to date.
 Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/UC_MUX.vhd" in Library work.
-Architecture behavioral of Entity uc_mux is up to date.
+Entity <uc_mux> compiled.
+Entity <uc_mux> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/082190011/Documents/GitHub/ResSegMux7SegPlusUCFD/ResSegMux7SegPlusUCFDProj/SD_MUX.vhd" in Library work.
-Entity <sd_mux> compiled.
-Entity <SD_MUX> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity sd_mux is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <SD_MUX> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <SD_MUX> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <regmux7seg> in library <work> (architecture <behavioral>).
 
@@ -137,7 +137,7 @@ Analyzing hierarchy for entity <decoder7seg> in library <work> (architecture <be
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <SD_MUX> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <SD_MUX> in library <work> (Architecture <behavioral>).
 Entity <SD_MUX> analyzed. Unit <SD_MUX> generated.
 
 Analyzing Entity <regmux7seg> in library <work> (Architecture <behavioral>).
@@ -242,15 +242,15 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <Inst_UC_MUX/ESTADO_ATUAL/FSM> on signal <ESTADO_ATUAL[1:5]> with one-hot encoding.
+Optimizing FSM <Inst_UC_MUX/ESTADO_ATUAL/FSM> on signal <ESTADO_ATUAL[1:3]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
- est_0 | 00001
- est_1 | 00010
- est_2 | 00100
- est_3 | 01000
- est_4 | 10000
+ est_0 | 000
+ est_1 | 001
+ est_2 | 011
+ est_3 | 010
+ est_4 | 110
 -------------------
 
 =========================================================================
@@ -272,6 +272,10 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <SD_MUX> ...
+WARNING:Xst:1294 - Latch <Inst_UC_MUX/SEL> is equivalent to a wire in block <SD_MUX>.
+WARNING:Xst:1294 - Latch <Inst_UC_MUX/EN3> is equivalent to a wire in block <SD_MUX>.
+WARNING:Xst:1294 - Latch <Inst_UC_MUX/EN2> is equivalent to a wire in block <SD_MUX>.
+WARNING:Xst:1294 - Latch <Inst_UC_MUX/EN1> is equivalent to a wire in block <SD_MUX>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -283,8 +287,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 15
+ Flip-Flops                                            : 15
 
 =========================================================================
 
@@ -313,19 +317,17 @@ Design Statistics
 # IOs                              : 21
 
 Cell Usage :
-# BELS                             : 26
+# BELS                             : 25
 #      GND                         : 1
-#      LUT2                        : 3
-#      LUT3                        : 5
+#      LUT2                        : 2
+#      LUT3                        : 7
 #      LUT3_L                      : 2
-#      LUT4                        : 13
-#      LUT4_L                      : 1
+#      LUT4                        : 11
+#      MUXF5                       : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 21
-#      FDC                         : 4
-#      FDP                         : 1
+# FlipFlops/Latches                : 15
+#      FDC                         : 3
 #      FDRE                        : 12
-#      LD                          : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 20
@@ -338,9 +340,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                       14  out of    960     1%  
- Number of Slice Flip Flops:             21  out of   1920     1%  
- Number of 4 input LUTs:                 24  out of   1920     1%  
+ Number of Slices:                       12  out of    960     1%  
+ Number of Slice Flip Flops:             15  out of   1920     0%  
+ Number of 4 input LUTs:                 22  out of   1920     1%  
  Number of IOs:                          21
  Number of bonded IOBs:                  21  out of     83    25%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -363,31 +365,26 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------------------+-------------------------+-------+
-Clock Signal                                    | Clock buffer(FF name)   | Load  |
-------------------------------------------------+-------------------------+-------+
-Inst_UC_MUX/SEL_or0000(Inst_UC_MUX/SEL_or0000:O)| NONE(*)(Inst_UC_MUX/SEL)| 4     |
-CLK                                             | BUFGP                   | 17    |
-------------------------------------------------+-------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 15    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-RST                                | IBUF                   | 5     |
+RST                                | IBUF                   | 3     |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 3.474ns (Maximum Frequency: 287.853MHz)
-   Minimum input arrival time before clock: 4.151ns
+   Minimum period: 3.523ns (Maximum Frequency: 283.849MHz)
+   Minimum input arrival time before clock: 5.099ns
    Maximum output required time after clock: 5.870ns
    Maximum combinational path delay: No path found
 
@@ -397,47 +394,48 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK'
-  Clock period: 3.474ns (frequency: 287.853MHz)
-  Total number of paths / destination ports: 26 / 9
+  Clock period: 3.523ns (frequency: 283.849MHz)
+  Total number of paths / destination ports: 51 / 19
 -------------------------------------------------------------------------
-Delay:               3.474ns (Levels of Logic = 2)
-  Source:            Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2 (FF)
+Delay:               3.523ns (Levels of Logic = 2)
+  Source:            Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd3 (FF)
   Destination:       Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2 to Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1
+  Data Path: Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd3 to Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.591   0.712  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2 (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2)
-     LUT2:I1->O            1   0.704   0.455  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd5-In2_SW2 (N19)
-     LUT4:I2->O            1   0.704   0.000  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1-In1 (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1-In)
+     FDC:C->Q              8   0.591   0.761  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd3 (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd3)
+     LUT4:I3->O            1   0.704   0.455  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1-In_SW0 (N20)
+     LUT4:I2->O            1   0.704   0.000  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1-In (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1-In)
      FDC:D                     0.308          Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1
     ----------------------------------------
-    Total                      3.474ns (2.307ns logic, 1.167ns route)
-                                       (66.4% logic, 33.6% route)
+    Total                      3.523ns (2.307ns logic, 1.216ns route)
+                                       (65.5% logic, 34.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
-  Total number of paths / destination ports: 36 / 25
+  Total number of paths / destination ports: 34 / 23
 -------------------------------------------------------------------------
-Offset:              4.151ns (Levels of Logic = 3)
-  Source:            MST2 (PAD)
-  Destination:       Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1 (FF)
+Offset:              5.099ns (Levels of Logic = 4)
+  Source:            GV2 (PAD)
+  Destination:       Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2 (FF)
   Destination Clock: CLK rising
 
-  Data Path: MST2 to Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd1
+  Data Path: GV2 to Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   1.218   0.762  MST2_IBUF (MST2_IBUF)
-     LUT3:I0->O            1   0.704   0.455  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd5-In2_SW4 (N22)
-     LUT4:I2->O            1   0.704   0.000  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd5-In1 (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd5-In)
-     FDP:D                     0.308          Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd5
+     IBUF:I->O             4   1.218   0.762  GV2_IBUF (GV2_IBUF)
+     LUT3:I0->O            1   0.704   0.595  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2-In8 (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2-In8)
+     LUT3_L:I0->LO         1   0.704   0.104  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2-In23_SW0 (N23)
+     LUT4:I3->O            1   0.704   0.000  Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2-In23 (Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2-In)
+     FDC:D                     0.308          Inst_UC_MUX/ESTADO_ATUAL_FSM_FFd2
     ----------------------------------------
-    Total                      4.151ns (2.934ns logic, 1.217ns route)
-                                       (70.7% logic, 29.3% route)
+    Total                      5.099ns (3.638ns logic, 1.461ns route)
+                                       (71.3% logic, 28.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
@@ -462,14 +460,14 @@ Offset:              5.870ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.88 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.09 secs
  
 --> 
 
-Total memory usage is 232624 kilobytes
+Total memory usage is 4500836 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 
